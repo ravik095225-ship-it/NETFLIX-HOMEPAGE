@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Watch TV Shows & Movies Online</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- STICKY NAVIGATION BAR                        -->
+    <!-- ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Left: Logo & Primary Navigation -->
+            <div class="nav-left">
+                <!-- Netflix-style logo using CSS -->
+                <a href="#" class="logo">
+                    <span class="logo-text">STREAMFLIX</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">New & Popular</a></li>
+                    <li><a href="#">My List</a></li>
+                    <li><a href="#">Browse by Languages</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: Secondary Navigation Icons -->
+            <div class="nav-right">
+                <!-- Search Icon -->
+                <button class="nav-icon" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </button>
+                <!-- Kids link -->
+                <a href="#" class="nav-kids">Kids</a>
+                <!-- Notifications Icon -->
+                <button class="nav-icon nav-notify" aria-label="Notifications">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                    </svg>
+                </button>
+                <!-- User Profile Avatar -->
+                <div class="nav-profile">
+                    <div class="avatar"></div>
+                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO BANNER SECTION                          -->
+    <!-- ============================================ -->
+    <header class="hero">
+        <!-- Video Background -->
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline poster="images/hero-bg.jpg">
+                <source src="videos/hero-video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Dark Gradient Overlay -->
+        <div class="hero-overlay"></div>
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <!-- Movie Title -->
+            <h1 class="hero-title">NEON<br>SHADOWS</h1>
+            <!-- Metadata Row -->
+            <div class="hero-meta">
+                <span class="hero-rating">98% Match</span>
+                <span class="hero-year">2025</span>
+                <span class="hero-maturity">TV-MA</span>
+                <span class="hero-seasons">1 Season</span>
+            </div>
+            <!-- Description -->
+            <p class="hero-description">
+                In a dystopian future where corporations rule the neon-soaked streets, 
+                a rogue hacker discovers a conspiracy that threatens to rewrite humanity itself. 
+                With the city against her, she must navigate a world of corruption, betrayal, 
+                and digital warfare to expose the truth before it is erased forever.
+            </p>
+            <!-- Action Buttons -->
+            <div class="hero-buttons">
+                <button class="btn btn-play">
+                    <!-- Play Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    Play
+                </button>
+                <button class="btn btn-info">
+                    <!-- Info Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    More Info
+                </button>
+            </div>
+        </div>
+        <!-- Bottom Gradient Fade -->
+        <div class="hero-fade"></div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- MAIN CONTENT - MOVIE CATEGORIES              -->
+    <!-- ============================================ -->
+    <main class="main-content">
+
+        <!-- ---- Category: Trending Now ---- -->
+        <section class="category">
+            <h2 class="category-title">Trending Now</h2>
+            <div class="movie-row">
+                <article class="movie-card">
+                    <img src="images/movie1.jpg" alt="Nightfall Protocol - Action Thriller" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-like" aria-label="Like">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-match">98% Match</span>
+                            <span class="card-rating">TV-MA</span>
+                            <span class="card-duration">2h 15m</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>Action</span>
+                            <span>Thriller</span>
+                            <span>Spy</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <img src="images/movie2.jpg" alt="Cosmic Odyssey - Sci-Fi Adventure" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-like" aria-label="Like">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-match">95% Match</span>
+                            <span class="card-rating">PG-13</span>
+                            <span class="card-duration">2h 32m</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>Sci-Fi</span>
+                            <span>Adventure</span>
+                            <span>Space</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <img src="images/movie3.jpg" alt="Etherium Manor - Horror" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-like" aria-label="Like">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-match">88% Match</span>
+                            <span class="card-rating">R</span>
+                            <span class="card-duration">1h 58m</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>Horror</span>
+                            <span>Supernatural</span>
+                            <span>Mystery</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <img src="images/movie4.jpg" alt="Whispered Dreams - Romantic Drama" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-like" aria-label="Like">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-match">92% Match</span>
+                            <span class="card-rating">PG-13</span>
+                            <span class="card-duration">2h 05m</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>Romance</span>
+                            <span>Drama</span>
+                            <span>Feel-Good</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <img src="images/movie5.jpg" alt="The Golden Grip - Crime Thriller" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-like" aria-label="Like">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-match">96% Match</span>
+                            <span class="card-rating">TV-MA</span>
+                            <span class="card-duration">2h 22m</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>Crime</span>
+                            <span>Heist</span>
+                            <span>Thriller</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="movie-card">
+                    <img src="images/movie6.jpg" alt="DragonHeart - Fantasy Adventure" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-like" aria-label="Like">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-match">90% Match</span>
+                            <span class="card-rating">PG-13</span>
+                            <span class="card-duration">2h 45m</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>Fantasy</span>
+                            <span>Adventure</span>
+                            <span>Epic</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ---- Category: Popular on StreamFlix ---- -->
+        <section class="category">
+            <h2 class="category-title">Popular on StreamFlix</h2>
+            <div class="movie-row">
+                <article class="movie-card">
+                    <img src="images/movie7.jpg" alt="Confetti Chaos - Comedy" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">87% Match</span>
+				<span class="card-rating">PG-13</span>
+				<span class="card-duration">1h 45m</span>
+			</div>
+			<div class="card-tags">
+				<span>Comedy</span>
+       				<span>Party</span>
+				<span>Fun</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie8.jpg" alt="Iron Haze - War Drama"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">94% Match</span>
+				<span class="card-rating">R</span>
+				<span class="card-duration">2h 45m</span>
+			</div>
+			<div class="card-tags">
+				<span>War</span>
+       				<span>Drama</span>
+				<span>Action</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie9.jpg" alt="The fragments within - Thriller"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">91% Match</span>
+				<span class="card-rating">TV-MA</span>
+				<span class="card-duration">2h 15m</span>
+			</div>
+			<div class="card-tags">
+				<span>Psychological</span>
+       				<span>Thriller</span>
+				<span>Mystery</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie10.jpg" alt="The Untamed Frontier - Servival Adventure"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">89% Match</span>
+				<span class="card-rating">PG-13</span>
+				<span class="card-duration">2h 55m</span>
+			</div>
+			<div class="card-tags">
+				<span>Servival</span>
+       				<span>Adventure</span>
+				<span>Drama</span>
+			  </div>
+			</div>
+
+		</article>
+
+
+
+
+		<article class="movie-card">
+		     <img src="images/movie11.jpg" alt="The Golden Grip - Crime"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">NEW</span>
+				<span class="card-rating">TV-MA</span>
+				<span class="card-duration">2h 00m</span>
+			</div>
+			<div class="card-tags">
+				<span>Crime</span>
+       				<span>Heist</span>
+				<span>Noir</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie12.jpg" alt="Cosmo's Odyseey - Animatio"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">94% Match</span>
+				<span class="card-rating">PG</span>
+				<span class="card-duration">1h 50m</span>
+			</div>
+			<div class="card-tags">
+				<span>Animation</span>
+       				<span>Family</span>
+				<span>Adventure</span>
+			  </div>
+			</div>
+		</article>
+             </div>
+	</section>
+
+	<!-- ---- Category: New-Released Films ---- -->
+       	<section class="Category">
+       		<h2 class="Category-Title">New-Released Films</h2>
+		<div class="movie-row">
+                  <article class="movie-card">
+		     <img src="images/movie6.jpg" alt="DragonHeart - Fantasty"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">NEW</span>
+				<span class="card-rating">PG-13</span>
+				<span class="card-duration">2h 5m</span>
+			</div>
+			<div class="card-tags">
+				<span>Fantasty</span>
+       				<span>Epics</span>
+				<span>Dragon</span>
+			  </div>
+			</div>
+		</article>
+ 		<article class="movie-card">
+		     <img src="images/movie1.jpg" alt="Nightfall Protocol - Action"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">New/span>
+				<span class="card-rating">TV-MA</span>
+				<span class="card-duration">0h 50m</span>
+			</div>
+			<div class="card-tags">
+				<span>Action</span>
+       				<span>Spy</span>
+				<span>Thriller</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie4.jpg" alt="Whispered Dreams - Rommance"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">NEW</span>
+				<span class="card-rating">PG-13</span>
+				<span class="card-duration">1h 30m</span>
+			</div>
+			<div class="card-tags">
+				<span>Rommance</span>
+       				<span>Drama</span>
+				<span>Sunset</span>
+			  </div>
+			</div>
+		</article>
+
+		<article class="movie-card">
+		     <img src="images/movie9.jpg" alt="The Fragments within - thriller"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">NEW</span>
+				<span class="card-rating">TV-MA</span>
+				<span class="card-duration">2h 10m</span>
+			</div>
+			<div class="card-tags">
+				<span>Psychological</span>
+       				<span>Dark</span>
+				<span>Mystery</span>
+			  </div>
+			</div>
+		</article>
+		
+		<article class="movie-card">
+		     <img src="images/movie5.jpg" alt="The Golden Grip - Crime"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">NEW</span>
+				<span class="card-rating">TV-MA</span>
+				<span class="card-duration">2h 22m</span>
+			</div>
+			<div class="card-tags">
+				<span>Crime</span>
+       				<span>Heist</span>
+				<span>Noise</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie12.jpg" alt="Cosmo's Odyseey - Animatio"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">NEW</span>
+				<span class="card-rating">PG</span>
+				<span class="card-duration">1h 52m</span>
+			</div>
+			<div class="card-tags">
+				<span>Animation</span>
+       				<span>Family</span>
+				<span>Aliens</span>
+			  </div>
+			</div>
+		</article>
+	     </div>		
+	</section>
+
+	 <!-- ---- Category: Award-Winning Films ---- -->
+        <section class="category">
+            <h2 class="category-title">Award-Winning Films</h2>
+            <div class="movie-row">
+                <article class="movie-card">
+                    <img src="images/movie8.jpg" alt="Iron Haze - War Drama" loading="lazy">
+                    <div class="movie-card-overlay">
+                        <div class="card-actions">
+                            <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">97% Match</span>
+				<span class="card-rating">R</span>
+				<span class="card-duration">2h 38m</span>
+			</div>
+			<div class="card-tags">
+				<span>War</span>
+       				<span>Action</span>
+				<span>Drama</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie11.jpg" alt="Shadow of the rain - Noir"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">94% Match</span>
+				<span class="card-rating">TV-MA</span>
+				<span class="card-duration">2h 08m</span>
+			</div>
+			<div class="card-tags">
+				<span>Noir</span>
+       				<span>Mystery</span>
+				<span>Classic</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie2.jpg" alt="Cosmic Oddeysey - sci-fi"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">91% Match</span>
+				<span class="card-rating">PG-133</span>
+				<span class="card-duration">2h 35m</span>
+			</div>
+			<div class="card-tags">
+				<span>SCI-FI</span>
+       				<span>Space</span>
+				<span>Epic</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie3.jpg" alt="Etherium Manor - Horror"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">89% Match</span>
+				<span class="card-rating">R</span>
+				<span class="card-duration">1h 58m</span>
+			</div>
+			<div class="card-tags">
+				<span>Horror</span>
+       				<span>Super Natural</span>
+				<span>Haunted</span>
+			  </div>
+			</div>
+
+		</article>
+
+
+
+
+		<article class="movie-card">
+		     <img src="images/movie10.jpg" alt="The Untamed Frontier - Servival"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">91% Match</span>
+				<span class="card-rating">PG-13</span>
+				<span class="card-duration">2h 20m</span>
+			</div>
+			<div class="card-tags">
+				<span>Servival</span>
+       				<span>Wilderness</span>
+				<span>Drama</span>
+			  </div>
+			</div>
+		</article>
+		<article class="movie-card">
+		     <img src="images/movie7.jpg" alt="Confetti Chaos - Comedy"  loading="lazy">
+		     <div class="movie-card-overlay">
+			<div class="card-actions">
+ 			 <button class="card-btn card-play" aria-label="Play">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card-add" aria-label="Add to List">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <button class="card-btn card like" aria-label="like">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+					<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.671-1.06-1.06a5.5 5.5 0 0 0-7.78 7.7811.06 1.06L12 21.2317.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+				</svg>
+			  </button>
+			</div>
+			<div class="card-info">
+ 				<span class="card-match">88% Match</span>
+				<span class="card-rating">PG-13</span>
+				<span class="card-duration">1h 45m</span>
+			</div>
+			<div class="card-tags">
+				<span>Animation</span>
+       				<span>Family</span>
+				<span>Adventure</span>
+			  </div>
+			</div>
+		</article>
+             </div>
+	</section>
+
+    </main>
+
+    <!-- ===================================== -->
+    <!-- FOOTER SECTION
+    <!-- ===================================== -->
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+		<a href="#" aria label="Facebook">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h311-4h-4V7a1 1 0 0 1 1-1h3z"/>
+		   </svg>
+		</a>
+		<a href="#" aria label="Instagram">
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+		   </svg>
+		</a>
+		<a href="#" aria label="Twitter
+                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23 3a10.9 10 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+		   </svg>
+		</a>
+		</div>
+
+		<!-- Footer Links Grids -->
+		<div class="footer-links">
+		    <div class="footer-col">
+			<a href="#">Audio discription</a>
+			<a href="#">Investor Relations</a>
+			<a href="#">Legal notices</a>
+		    </div>
+                     <div class="footer-col">
+			<a href="#">Help Centers</a>
+			<a href="#">Jobs</a>
+			<a href="#">Cookies performance</a>
+		    </div>
+                     <div class="footer-col">
+			<a href="#">Gifts cards</a>
+			<a href="#">Terms of Uses</a>
+			<a href="#">Corporate Informaion</a>
+		    </div>
+                     <div class="footer-col">
+			<a href="#">Media Center</a>
+			<a href="#">Privacy</a>
+			<a href="#">Contacts</a>
+		    </div>
+		</div>
+
+	<!-- Services Code Button -->
+	<button class="footer-btn">Service code</button>
+	
+	<!-- Copyright -->
+        <p class="footer-copyright">&copy; 2026 StreamFlix, inc. All rights reserved.</p>
+       </div>
+      </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
